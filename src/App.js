@@ -21,8 +21,6 @@ const App = () => {
     }
   };
 
-  console.log(process.env.REACT_APP_OMDB_API_KEY);
-
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}${process.env.REACT_APP_OMDB_API_KEY}&s=${title}`);
     const data = await response.json();
